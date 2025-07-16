@@ -9,7 +9,7 @@ Welcome to our real-time chat application! This project is built with the latest
 - **Real-Time Messaging:** Instantly send and receive messages with other users.
 - **Modern UI/UX:** A clean and intuitive user interface built with **shadcn/ui**.
 - **Responsive Design:** Fully responsive layout that works on desktop, tablet, and mobile devices.
-- **User Authentication:** (Coming Soon) Secure sign-up and login functionality.
+- **User Authentication:** Secure sign-up and login functionality.
 - **Scalable Architecture:** Built on Next.js for optimal performance and scalability.
 
 ## 🛠️ Tech Stack
@@ -19,8 +19,7 @@ This project is built with a modern, full-stack JavaScript toolkit:
 - **Framework:** [Next.js](https://nextjs.org/) (React)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
-- **Database:** (e.g., Firebase, Supabase, MongoDB - *You can specify this*)
-- **Real-time Engine:** (e.g., Socket.IO, Pusher, Firebase Realtime Database - *You can specify this*)
+- **Database:** [Convex](https://www.convex.dev//)
 - **Deployment:** [Vercel](https://vercel.com/)
 
 ## 🚀 Getting Started
@@ -56,7 +55,6 @@ Make sure you have Node.js (version 18.x or higher) and a package manager (npm, 
     Create a `.env.local` file in the root of your project and add the necessary environment variables.
     ```env
     # Example environment variables
-    NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
     DATABASE_URL=your_database_url
     ```
 
@@ -70,18 +68,6 @@ Make sure you have Node.js (version 18.x or higher) and a package manager (npm, 
     ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the main page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
 
 ## 📄 License
 
