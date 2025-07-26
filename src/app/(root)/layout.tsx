@@ -1,13 +1,16 @@
+import SideBarWrapper from '@/components/shared/sidebar/SideBarWrapper'
 import React, { Children } from 'react'
 
-type Props = React.PropsWithChildren<{
-    name: string
-}>
+type Props = React.PropsWithChildren<{}>
 
-const Layout = ({children}: Props) => {
-  return (
-    <>{children}</>
-  )
+const layout = ({ children }: Props) => {
+    return (
+        <>
+            <SideBarWrapper>
+                {children}
+            </SideBarWrapper>
+        </>
+    )
 }
 
-export default Layout
+export default layout
