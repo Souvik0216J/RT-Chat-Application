@@ -6,9 +6,14 @@ import { UserButton } from '@clerk/clerk-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@radix-ui/react-tooltip'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { useChat } from '../../../../../hooks/useChat'
+import { ThemeToggle } from '@/components/ui/theme/theme-toggle'
 
 function MobileNav() {
     const paths = useNavigation()
+    const { isActive } = useChat()
+
+    if (isActive) return null
 
     return (
         <div>
@@ -31,10 +36,17 @@ function MobileNav() {
                                 </Link>
                             </li>
                         ))}
+                        <li><ThemeToggle /></li>
                         <li>
                             <UserButton
-                               
-                            />
+                                appearance={{
+                                    elements: {
+                                        userButtonAvatarBox: {
+                                            width: '34px',
+                                            height: '34px',
+                                        },
+                                    },
+                                }} />
                         </li>
                     </ul>
                 </nav>

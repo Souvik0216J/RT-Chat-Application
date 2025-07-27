@@ -6,6 +6,7 @@ import { UserButton } from '@clerk/clerk-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@radix-ui/react-tooltip'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/ui/theme/theme-toggle'
 
 function DesktopNav() {
     const paths = useNavigation()
@@ -34,12 +35,13 @@ function DesktopNav() {
                     </ul>
                 </nav>
                 <div className='flex flex-col items-center gap-4'>
+                    <ThemeToggle />
                     <UserButton
                         appearance={{
                             elements: {
                                 userButtonAvatarBox: {
-                                    width: '34px',
-                                    height: '34px',
+                                    width: '36px',
+                                    height: '36px',
                                 },
                             },
                         }} />
