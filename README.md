@@ -37,7 +37,7 @@ Make sure you have Node.js (version 18.x or higher) and a package manager (npm, 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone [https://github.com/Souvik0216J/RT-Chat-Application.git](https://github.com/Souvik0216J/RT-Chat-Application.git)
     cd your-repo-name
     ```
 
