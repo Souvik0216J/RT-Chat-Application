@@ -38,7 +38,6 @@ Make sure you have Node.js (version 18.x or higher) and a package manager (npm, 
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/Souvik0216J/RT-Chat-Application.git](https://github.com/Souvik0216J/RT-Chat-Application.git)
-    cd your-repo-name
     ```
 
 2.  **Install dependencies:**
