@@ -16,42 +16,40 @@ function MobileNav() {
     if (isActive) return null
 
     return (
-        <div>
-            <Card className='fixed bottom-4 w-[calc(100vw-32px)] flex items-center h-16 p-2 lg:hidden'>
-                <nav className='w-full'>
-                    <ul className='flex justify-evenly items-center'>
-                        {paths.map((path, id) => (
-                            <li key={id} className='relative'>
-                                <Link href={path.href}>
-                                    <Tooltip>
-                                        <TooltipTrigger>
-                                            <Button className='hover:cursor-pointer' size="icon" variant={path.active ? "default" : "outline"}>
-                                                {path.icon}
-                                            </Button>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>{path.name}</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </Link>
-                            </li>
-                        ))}
-                        <li><ThemeToggle /></li>
-                        <li>
-                            <UserButton
-                                appearance={{
-                                    elements: {
-                                        userButtonAvatarBox: {
-                                            width: '34px',
-                                            height: '34px',
-                                        },
-                                    },
-                                }} />
+        <Card className='fixed bottom-4 w-[calc(100vw-32px)] flex items-center h-16 p-2 lg:hidden'>
+            <nav className='w-full'>
+                <ul className='flex justify-evenly items-center'>
+                    {paths.map((path, id) => (
+                        <li key={id} className='relative'>
+                            <Link href={path.href}>
+                                <Tooltip>
+                                    <TooltipTrigger>
+                                        <Button className='hover:cursor-pointer' size="icon" variant={path.active ? "default" : "outline"}>
+                                            {path.icon}
+                                        </Button>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p>{path.name}</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </Link>
                         </li>
-                    </ul>
-                </nav>
-            </Card>
-        </div>
+                    ))}
+                    <li><ThemeToggle /></li>
+                    <li>
+                        <UserButton
+                            appearance={{
+                                elements: {
+                                    userButtonAvatarBox: {
+                                        width: '34px',
+                                        height: '34px',
+                                    },
+                                },
+                            }} />
+                    </li>
+                </ul>
+            </nav>
+        </Card>
     )
 }
 

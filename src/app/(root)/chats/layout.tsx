@@ -6,7 +6,7 @@ type Props = React.PropsWithChildren<{}>
 const ChatLayout = ({ children }: Props) => {
     return (
         <>
-        <ItemList title='Chats'>Chats Page</ItemList>
+            <ItemList title='Chats'>Chats Page</ItemList>
             {children}
         </>
     )
