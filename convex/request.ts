@@ -32,20 +32,24 @@ export const create = mutation({
             throw new ConvexError("User could not be found")
         }
 
+        // Check if current user already sent a request to receiver
         const requestAlreadySent = await ctx.db.query("requests").withIndex("by_receiver_sender", q =>
             q.eq("receiver", receiver._id).eq("sender", currentUser._id)
         ).unique();
 
         if (requestAlreadySent) {
+            console.log("Request already sent");
             throw new ConvexError("Request already sent")
         }
 
-        const requestAlreadyReceiver = await ctx.db.query("requests").withIndex("by_receiver_sender", q =>
+        // Check if receiver already sent a request to current user
+        const requestAlreadyReceived = await ctx.db.query("requests").withIndex("by_receiver_sender", q =>
             q.eq("receiver", currentUser._id).eq("sender", receiver._id)
         ).unique();
 
-        if (requestAlreadyReceiver) {
-            throw new ConvexError("This user has already sent your a request")
+        if (requestAlreadyReceived) {
+            console.log("Request already received");
+            throw new ConvexError("This user has already sent you a request")
         }
 
         const request = await ctx.db.insert("requests", {
