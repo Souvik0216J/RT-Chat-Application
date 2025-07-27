@@ -49,6 +49,8 @@ export const create = mutation({
         }
 
         const request = await ctx.db.insert("requests", {
+            senderEmail: currentUser.email,
+            receiverEmail: receiver.email,
             sender: currentUser._id,
             receiver: receiver._id,
         })
