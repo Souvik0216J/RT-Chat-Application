@@ -77,7 +77,7 @@ function AddFriendDialog() {
                             )}
                         />
                         <DialogFooter>
-                            <Button type='submit'>Send</Button>
+                            <Button disabled={pending} type='submit'>Send</Button>
                         </DialogFooter>
                     </form>
                 </FormProvider>

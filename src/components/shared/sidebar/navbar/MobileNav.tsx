@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useChat } from '../../../../../hooks/useChat'
 import { ThemeToggle } from '@/components/ui/theme/theme-toggle'
+import { Badge } from '@/components/ui/badge'
 
 function MobileNav() {
     const paths = useNavigation()
@@ -23,6 +24,10 @@ function MobileNav() {
                         <li key={id} className='relative'>
                             <Link href={path.href}>
                                 <Tooltip>
+
+                                    {path.count ? (<Badge className='absolute left-6 bottom-7 px-2'>
+                                        {path.count}
+                                    </Badge>) : null}
                                     <TooltipTrigger>
                                         <Button className='hover:cursor-pointer' size="icon" variant={path.active ? "default" : "outline"}>
                                             {path.icon}
