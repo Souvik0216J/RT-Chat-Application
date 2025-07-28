@@ -111,7 +111,7 @@ export const get = query({
                 throw new ConvexError("Request sender could not be found");
             }
 
-            return { sender, request }; // Fixed: was 'requests' should be 'request'
+            return { sender, requests: request }; // Keep original naming for backward compatibility
         }));
 
         return requestWithSender;
