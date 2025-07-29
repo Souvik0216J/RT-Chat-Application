@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { Id } from '../../../../../convex/_generated/dataModel'
 import { Card } from '@/components/ui/card';

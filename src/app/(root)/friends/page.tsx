@@ -17,7 +17,7 @@ const FriendsPage = (props: Props) => {
         <>
             <ItemList title='Friends' action={<AddFriendDialog />}>
                 {
-                    requests ? requests.length === 0 ? <p className='w-full h-full flex items-center justify-center'>No friends requests found</p> : requests.map(request => { return <Request key={request.requests._id} id={request.requests._id} imageUrl={request.sender.imageUrl} username={request.sender.username} email={request.sender.email} _creationTime={request.requests._creationTime}></Request> }) : <Loader2 className='h-8 w-8' />
+                    requests ? requests.length === 0 ? <p className='w-full h-full flex items-center justify-center'>No friends requests found</p> : requests.map(request => { return <Request key={request.requests._id} id={request.requests._id} imageUrl={request.sender.imageUrl} username={request.sender.username} email={request.sender.email} _creationTime={request.requests._creationTime}></Request> }) : <Loader2 className='h-8 w-8 animate-spin' />
                 }
             </ItemList>
             <ChatFallback />
